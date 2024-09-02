@@ -1,17 +1,49 @@
-*{
+* {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
 }
-html,body{
-    width:100%;
-    height:100%;
-    /* position: relative; */
-   font-family: Gilroy;
-   
-   scroll-behavior: smooth;
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Gilroy, sans-serif;
+    scroll-behavior: smooth;
 }
 
+/* General Typography and Layout Adjustments */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+#main{
+    width: 100%;
+    overflow: hidden;
+}
+#first{
+    display: flex;
+    height: 140vh;
+    width: 100%;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    /* position: relative; */
+    /* overflow: hidden; */
+
+    /* backdrop-filter: blur(40px); */
+
+}
+/* Responsive Text Adjustments */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
 .txt{
     font-family: 'Courier New', Courier, monospace;
     font-size: 3vw;
@@ -23,15 +55,31 @@ html,body{
     letter-spacing: 0.3rem;
     font-weight: bold;
 }
-/* PRELOADER CSS */
-.page-loader{
-	width: 100%;
-	height: 100vh;
-	position: absolute;
-	background: #272727;
-	z-index: 10;
-	
+/* Preloader */
+.page-loader {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: #272727;
+    z-index: 10;
 }
+
+/* Nav Styles */
+#nav {
+    top: -15%;
+    opacity: 0;
+    /* position: fixed; */
+    background-color: #ffffff7e;
+    backdrop-filter: blur(40px);
+    padding: 0px 20px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* transition: height 0.3s; */
+}
+
 /* SPINNER ANIMATION */
 .spinner {
 	position: relative;
@@ -66,40 +114,6 @@ html,body{
 }
 
 /* ############ nav ############ */
-#main{
-    width: 100%;
-    overflow: hidden;
-}
-
-#first{
-    display: flex;
-    height: 140vh;
-    width: 100%;
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    /* position: relative; */
-    /* overflow: hidden; */
-
-    /* backdrop-filter: blur(40px); */
-
-}
-#nav{
-    top: -15%;
-    opacity: 0;
-    z-index: 9999;
-    position: fixed;
-    background-color: #ffffff7e;
-    backdrop-filter: blur(40px);
-    /* -webkit-filter: blur(40px); */
-    padding: 0 40px;
-    height: 15%;
-    width: 100%; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
 #navstart{
     width: 20%;
     display: flex;
@@ -118,9 +132,15 @@ html,body{
     justify-content: center;
     gap: 6vw;
 }
+#navmid #search{
+    position: relative;
+    width: 100%;
+}
 #navend{
     position: relative;
+    /* padding-left: 400px; */
     width: 45%;
+    /* gap: 4vw; */
 
 }
 #navend a, #lang a{
@@ -155,13 +175,7 @@ html,body{
 #navend a:hover::after{
     transform: scaleX(1);
     transform-origin: left;
-
 }
-
-
-
-
-
 .menu-icon {
     height: 7vh;
     display: flex;
@@ -177,11 +191,7 @@ html,body{
 #menu-nav>a{
     color: #453f3f;
 }
-
-
-
 .menu-icon:hover #menu-nav {
-   
     background-color: #7f7f96;
     position: absolute;
     top: 8vh;
@@ -190,7 +200,7 @@ html,body{
     display: grid;
     align-content: center;
     -webkit-transition: all .5s, background, 2s .5s linear;
-  transition: all .5s, background 2s .5s linear;
+    transition: all .5s, background 2s .5s linear;
     
 }
 
@@ -241,11 +251,12 @@ html,body{
     align-items: center;
     justify-content: center;
     border: 1px solid #000;
+    /* background-color: #00acee; */
 
 }
 #search i{
     font-size: 1vw;
-    padding:  0 10px;
+    padding:  0 100px;
 }
 .ri-camera-line{
     cursor: pointer;
@@ -266,11 +277,12 @@ html,body{
 
 
 #firstI{
-    top: 15%;
+    top: 18%;
     width: 100%;
     height: 85%;
     position: absolute;
 }
+
 
 /* ##############33 centerdiv ###########33 */
 
