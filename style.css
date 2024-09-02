@@ -113,6 +113,7 @@ html,body{
 #navmid{
     width: 35%;
     display: flex;
+    padding-right: 10px;
     align-items: center;
     justify-content: center;
     gap: 6vw;
@@ -271,7 +272,6 @@ html,body{
     position: absolute;
 }
 
-
 /* ##############33 centerdiv ###########33 */
 
 #centerdiv{
@@ -284,7 +284,7 @@ html,body{
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
 }
 #centerdiv h1{
     font-size: 75px;
@@ -373,7 +373,7 @@ animation-delay: 2s;
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 130%;
+    top: 158%;
     left: 50%;
     transform: translate(-50%,0);
     transition: all  ease-in-out;
@@ -389,10 +389,10 @@ animation-delay: 2s;
 
 }
 #centerimage #one{
-    left: 19%;
+    left: 25%;
 }
 #centerimage #three{
-    left: 82%;
+    left: 65%;
 }
 #centerimage #two{
     z-index: 999;
@@ -699,15 +699,14 @@ input[type=submit] {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-   opacity: 1;
+    opacity: 1;
     transform: scale(1);
     font-family: 'Work Sans', sans-serif;
-    /* background-color: red; */
   }
   
   #sell1{
     border: 1px solid rgba(0, 0, 0, 0.562);
-    padding: 7vh;
+    padding: -2vh;
     background-color: #ededed;
     opacity: 1;
   }
@@ -733,10 +732,9 @@ input[type=submit] {
   .sell>h2{
     font-size: 7vh;
     text-align: center;
-    /* margin-top: 3vh; */
     font-family: serif;
     opacity: 1;
-    margin-bottom: 25px;
+    padding-bottom: 0px;
 }
 .sellright #country{
     width: 90%;
@@ -755,14 +753,14 @@ input[type=submit] {
     padding: 7%;
         /* position: absolute; */
         /* left: 5%; */
-/* background-color: red; */
+    /* background-color: rgb(0, 234, 255); */
     
 }
 #buy>h2{
     font-size: 7vh;
     text-align: center;
-    margin-bottom: 8vh;
-    margin-top: -3vh;
+    margin-bottom: 4vh;
+    margin-top: -6vh;
     font-family: serif;
     opacity: 1;
 }    
@@ -772,7 +770,7 @@ input[type=submit] {
     width: 100%;
     display: flex;
     gap: 5%;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
 #buybot{
     width: 100%;
@@ -819,7 +817,7 @@ input[type=submit] {
     height: 38%;
     width: 90%;
     position: absolute;
-    bottom: 0%;
+    bottom: -1%;
     left: 5%;
     /* padding: 2vh; */
 
@@ -851,7 +849,6 @@ input[type=submit] {
 #second{
     height: 100vh;
     width: 100%;
-    /* background-color: gray; */
     /* position: relative; */
     /* display: none; */
     transform: scale(1);
@@ -1328,27 +1325,184 @@ input[type=submit] {
   .Social-media a:hover .fa-youtube{
     color: #f00;
   }
-
-::-webkit-scrollbar{
+  ::-webkit-scrollbar{
     display: none;
 }
 
-
-
-@media(max-width:500px){
-    #first{
-        /* font-size: 1vh; */
+/* Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    #nav {
+        /* flex-direction: column; */
         width: 100%;
-        padding: 20px;
-        height: 100vh;
-    }  
-    #nav{
+        align-items: flex-start;
+        justify-content: space-between;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    #navstart{
+        width: 25%;
+        background-color: red;
+        gap: 3rem;
+        padding-right: 20px;
+    }
+
+    #navmid {
+        width: 45%;
+        /* margin: 10px 0; */
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    #navend {
+        width: 20%;
+        justify-content: space-between;
+    }
+
+    #centerdiv {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    #centerdiv h1 {
+        font-size: 2rem;
+    }
+
+    #centerdiv p {
+        font-size: 1rem;
+    }
+
+    #centerdiv button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* Adjust image size */
+    #centerdiv #centerimgdiv img {
+        width: 80%;
+    }
+
+    #centerimage img {
+        height: 50%;
+    }
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #nav {
+        padding: 5px 10px;
+    }
+
+    #navmid {
+        gap: 0.5rem;
+    }
+
+    #navend {
+        gap: 1rem;
+    }
+
+    #centerdiv {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    #centerdiv h1 {
+        font-size: 1.5rem;
+    }
+
+    #centerdiv p {
+        font-size: 0.9rem;
+    }
+
+    #centerdiv button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    #centerdiv #centerimgdiv img {
         width: 100%;
     }
-    #navmid{
-        display: none;
+
+    #centerimage img {
+        height: 40%;
     }
-    #navend{
-        display: none;
-    }
+}
+
+/* Responsive Layout Adjustments for Forms */
+.wrapper {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.input-box {
+    margin: 20px 0;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Responsive Rent and Sell Sections */
+.rent, .sell {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.rent input[type="text"], .sell input[type="text"], select {
+    width: 100%;
+}
+
+.rent .rentparent, .sell .sellparent {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Testimonials Section */
+#third .slidebox {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#third #slideboxleft img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Responsive Contact Us Section */
+#fourth {
+    padding: 20px;
+    text-align: center;
+}
+
+#fourth h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#fourth p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#fourth .container input, #fourth .container select, #fourth .container textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.Social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
